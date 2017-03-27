@@ -1,7 +1,7 @@
 inherit ocaml
 
 NAME="ocaml-labltk"
-VERSION=8.06.0
+VERSION=8.06.2
 RELEASE=1
 CATEGORY="OCaml"
 SUMMARY="OCaml Tcl/Tk interface"
@@ -9,15 +9,17 @@ DESCRIPTION="LablTk is an OCaml interface to the Tcl/Tk GUI framework. It
 allows to develop GUI applications in a speedy and type safe way. A legacy
 Camltk interface is included. The OCamlBrowser library viewer is also included."
 HOMEPAGE="https://forge.ocamlcore.org/projects/labltk/"
-SRC_URI="https://forge.ocamlcore.org/frs/download.php/1455/labltk-${VERSION}.tar.gz"
+SRC_URI="https://forge.ocamlcore.org/frs/download.php/1628/labltk-${VERSION}.tar.gz"
 SRC_DIR="labltk-${VERSION}"
+
+REQUIRES="ocaml"
 
 src_compile() {
 	lndirs
 	cd ${B}
 	./configure
-	cygmake all
-	cygmake opt
+	cygmake -j1 all
+	cygmake -j1 opt
 }
 
 src_install() {
