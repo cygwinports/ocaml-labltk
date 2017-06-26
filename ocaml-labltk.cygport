@@ -2,7 +2,7 @@ inherit ocaml
 
 NAME="ocaml-labltk"
 VERSION=8.06.2
-RELEASE=1
+RELEASE=2
 CATEGORY="OCaml"
 SUMMARY="OCaml Tcl/Tk interface"
 DESCRIPTION="LablTk is an OCaml interface to the Tcl/Tk GUI framework. It
